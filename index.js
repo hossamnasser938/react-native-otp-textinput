@@ -33,7 +33,7 @@ class OTPTextView extends PureComponent {
     const { defaultValue, cellTextLength } = this.props;
     this.otpText = defaultValue.match(new RegExp('.{1,' + cellTextLength + '}', 'g'));
     
-    this.inputs[0].focus();
+    setTimeout(this.inputs[0].focus, 0);
   }
 
   onTextChange = (text, i) => {
